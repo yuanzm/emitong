@@ -1,0 +1,93 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+body {
+	font-family: "微软雅黑";
+	background-color: #e8e8e8;  
+}
+/*wrapper begin*/
+.container {
+	margin-top: 20px;
+}	
+
+/*main-content begin*/
+#main-content {
+	width: 100%;
+}
+/*store-picture begin*/
+.store-picture {
+	width: 100%;
+	overflow: hidden;
+}
+.store-sign h4{
+	color: #b67818;
+	font-family: "LiSu";
+	font-size: 200%;
+	text-align: center;
+}
+.food-menu {
+	width: 96%;
+	border: solid 5px white; 
+	margin-left: 2%;
+}
+/*store-picture end*/
+
+/*food-name begin*/
+#food-name {
+	width: 96%;
+	padding-bottom: 3px;
+	padding-top: 3px; 
+	background-color: #ce0910;
+	margin-left: 2%;
+	margin-top: 10px;
+	color: white;
+	text-align: center;
+	font-size: 150%;
+}
+/*food-name end*/
+
+/*labels begin*/
+#labels {
+	margin-top: 15px;
+	width: 96%;
+	margin-left: 2%;
+}
+#labels .label-info {
+	width: 100%;
+	border: 1px solid #ce0910;
+	background-color: white;
+	overflow: hidden;
+}
+
+
+#label1 {
+	padding: 5px 20px 5px 20px;
+	background-color: #ce0910;
+	color: white;
+	font-size: 20px;
+}
+.currentprice {
+	color: #ce0910;
+}
+.orginal-price {
+	text-decoration: line-through;
+}
+/*labels end*/
+/*store-content begin*/
+#store-content {
+	width: 100%;
+	height: auto;   /* 130px */
+	background-color: #d3d3d3;	
+	padding: 10px; 
+	-moz-box-shadow:0 0 3px #5e5e5e inset;               /* For Firefox3.6+ */
+	-webkit-box-shadow:0 0 3px #5e5e5e inset;            /* For Chrome5+, Safari5+ */
+	box-shadow:0 0 3px #5e5e5e inset;                    /* For Latest Opera */
+}
+#store-content p {
+	color: #5e5e5e;
+}
+/*store-content*/
+/*main-content end*/
+
+/**wrapper end/

@@ -1,0 +1,133 @@
+<!-- Attention please
+由于这张页面是用用静态页面写的，没有用到后台，所以如果需要新增加问题的话，就需要复制和改写某些内容，比如，我需要新添加一个问题，那么我就复制下面的代码：
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">
+			<a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#collapseFive">
+				二锅头是不是二逼青年
+			</a>
+			<span class="glyphicon glyphicon-chevron-down"></span>
+		</h4>
+	</div>
+	<div id="collapseFive" class="panel-collapse collapse">
+		<div class="panel-body">
+			怎么可能是！！！
+		</div>
+	</div>
+</div>
+新添加的问题替换“二锅头是不是二逼青年”，问题的答案替换成“怎么可能是！！！”，然后同时修改a标签和下面的div标签里面的“#collapseFive”，两者一样即可，改完了之后，添加的已经存在的问题下面即可。 -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no ">
+	<title>疑难解答</title>
+	<link rel="stylesheet" href="../static/bootstrap/css/bootstrap.min.css">
+	<style type="text/css">
+		.glyphicon {
+			float: right;
+		}
+	</style>
+</head>
+<body>
+	<div class="panel-group" id="accordion">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">
+					<a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+						米谈社区使用指南
+					</a>
+					<span class="glyphicon glyphicon-chevron-down"></span>
+				</h4>
+			</div>
+			<div id="collapseOne" class="panel-collapse collapse">
+				<div class="panel-body">
+					1、对于意粉们发布的疑问，益哥哥米姐姐会第一时间回复，并公开显示出来；
+					2、发布主题内容，请意粉们遵循国家法规，多谢合作。
+					3、请线下登记信息的意粉们尽快绑定信息，以便获得最新优惠信息
+				</div>
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">
+					<a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+						益米真的有那么好么
+					</a>
+					<span class="glyphicon glyphicon-chevron-down"></span>
+				</h4>
+			</div>
+			<div id="collapseTwo" class="panel-collapse collapse">
+				<div class="panel-body">
+					你逗我吧，这不是废话么
+				</div>
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">
+					<a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+						益米团队是一个怎样的团队
+					</a>
+					<span class="glyphicon glyphicon-chevron-down"></span>
+				</h4>
+			</div>
+			<div id="collapseThree" class="panel-collapse collapse">
+				<div class="panel-body">
+					我觉得这个团队简直炫酷
+				</div>
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">
+					<a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+						大锅头是不是二逼青年
+					</a>
+					<span class="glyphicon glyphicon-chevron-down"></span>
+				</h4>
+			</div>
+			<div id="collapseFour" class="panel-collapse collapse">
+				<div class="panel-body">
+					这不是废话么
+				</div>
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">
+					<a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#collapseFive">
+						二锅头是不是二逼青年
+					</a>
+					<span class="glyphicon glyphicon-chevron-down"></span>
+				</h4>
+			</div>
+			<div id="collapseFive" class="panel-collapse collapse">
+				<div class="panel-body">
+					怎么可能是！！！
+				</div>
+			</div>
+		</div>
+
+		<!-- new question begin -->
+	
+		<!-- new question end -->
+	</div>
+</body>
+<script type="text/javascript" src="../static/js/jquery-2.1.0.min.js"></script>
+<script type="text/javascript" src="../static/bootstrap/js/bootstrap.js"></script>
+<script type="text/javascript">
+	$('.collapse').on('hide.bs.collapse', function () {
+		$(this).siblings("div").children("h4").children("span").attr("class","glyphicon glyphicon-chevron-down");
+	});
+
+	$('.collapse').on('show.bs.collapse', function () {
+		$(this).siblings("div").children("h4").children("span").attr("class","glyphicon glyphicon-chevron-up");
+	});
+
+	$(".panel-group").on("click",".glyphicon",function() {
+		$(this).parent().parent().siblings("div").collapse('toggle');
+	});
+</script>
+</html>
